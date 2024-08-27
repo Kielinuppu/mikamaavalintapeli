@@ -1,0 +1,180 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 120%;
+    padding-top: 0;
+}
+
+#game {
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 0;
+}
+
+#question-container, #start-screen {
+    position: relative;
+    gap: 24px;
+}
+
+.main-image {
+    width: 82.944%;
+    max-width: 414.72px;
+    height: auto;
+    margin: 15px auto;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.option {
+    width: 18%;
+    max-width: 150px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: transform 0.3s;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.option img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.option:hover {
+    transform: scale(1.05);
+}
+
+.option.selected {
+    outline: 4px solid black;
+}
+
+.option.correct {
+    outline: 4px solid green;
+}
+
+.option.incorrect {
+    outline: 4px solid red;
+}
+
+#game-controls {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    height: 60px;
+    z-index: 10;
+}
+
+#check-button, #next-arrow {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out;
+}
+
+#check-button, #start-button {
+    font-family: 'Quicksand', sans-serif;
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: transparent;
+    color: black;
+    border: 3px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+#next-arrow {
+    width: 70px;
+    height: auto;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+#star-area {
+    position: relative;
+    height: 60px;
+    margin: 15px 3px;
+    z-index: 5;
+}
+
+#stars-container, #final-stars-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.star-icon {
+    width: 45px;
+    height: auto;
+    margin: 0 5px;
+}
+
+h1 {
+    font-size: 200%;
+    margin: 5px 0;
+    margin-top: 0px;
+}
+
+h2 {
+    font-size: 160%;
+    margin: 15px 0;
+}
+
+button[onclick="restartGame()"] {
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: transparent;
+    color: black;
+    border: 3px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 120%;
+}
+
+@media (max-width: 600px) {
+    #game-controls {
+        height: 50px;
+    }
+
+    #next-arrow {
+        width: 50px;
+    }
+    
+    .option {
+        width: 30%;
+    }
+}

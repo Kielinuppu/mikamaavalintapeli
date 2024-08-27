@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIKÄ MAA?</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game">
+        <div id="start-screen">
+            <h1>MIKÄ MAA?</h1>
+            <button id="start-button" onclick="startGame()">ALOITA</button>
+        </div>
+        <div id="question-container" style="display: none;">
+            <h1>MIKÄ MAA TÄMÄ ON:</h1>
+            <img id="paakuva" src="" alt="Pääkuva" class="main-image">
+            <div class="options">
+                <img id="option1" class="option" onclick="selectOption(1)" alt="Vaihtoehto 1">
+                <img id="option2" class="option" onclick="selectOption(2)" alt="Vaihtoehto 2">
+                <img id="option3" class="option" onclick="selectOption(3)" alt="Vaihtoehto 3">
+                <img id="option4" class="option" onclick="selectOption(4)" alt="Vaihtoehto 4">
+                <img id="option5" class="option" onclick="selectOption(5)" alt="Vaihtoehto 5">
+            </div>
+            <div id="game-controls">
+                <button id="check-button" onclick="checkAnswer()">TARKISTA</button>
+                <img id="next-arrow" src="nuoli.avif" onclick="nextQuestion()" style="display: none;" alt="Seuraava kysymys">
+            </div>
+        </div>
+        <div id="star-area" style="visibility: hidden;">
+            <div id="stars-container" style="visibility: hidden;"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
